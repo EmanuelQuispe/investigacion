@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #134b5f, #0b64c5, #010e1b);
+    padding: 0;
+    color: azure;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: fixed;
+    height: 120px;
+    overflow: hidden;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Cambiado para espaciado uniforme entre elementos */
+    background: #96b0cc;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    background: url(iimg/Sin_título-removebg-preview.png) no-repeat 100% 100%;
+    /* imagen se escalarÃ¡ de forma que mantenga las proporciones*/
+    background-size: contain;
+    width: 320px;
+    height: 220px;
+    float: left;
+}
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+.menu {
+    position: absolute;
+    right: 50px;
+}
+
+.menu a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 30px;
+    transition: color 0.5s;
+    /*text-transform: uppercase;*/
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    height: 700px;
+    background: url(iimg/Alamy_F3EFXH__Edificio_Copan.jpg) no-repeat;
+    background-size: cover;
+    /* Ajusta el tamaÃ±o para contener completamente la imagen */
+    background-position: center;
+    /* Centra la imagen vertical y horizontalmente */
+    margin-top: 80px;
+}
+
+
+h2 {
+    text-decoration-line: thick;
+    text-decoration-style: solid;
+    margin-bottom: 25px;
+    margin-left: 60px;
+    margin-right: 45px;
+    font-size: 45px;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 25px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Crea 3 columnas iguales */
+    gap: 10px;
+    /* Espaciado entre las imÃ¡genes */
+    max-width: 1200px;
+    /* Ajusta segÃºn tus necesidades */
+    margin: 20px auto;
+    margin-top: 80px; /* Agrega un margen superior para dejar espacio para la barra de navegación */
+    /* Centra la galerÃ­a en la pÃ¡gina */
+}
+
+
+.gallery-item {
+    width: 300px; /* Establece un ancho fijo */
+    height: 450px; /* Establece una altura fija */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-right: 30px; /* Espaciado entre las imágenes */
+    
+}
+.gallery-item:hover {
+    transform: scale(1.2); /* Hace la imagen 20% más grande */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Agrega una sombra cuando se pasa el mouse */
+  }
+.gallery-item:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento para evitar espacio adicional */
+}
+
+.gallery-item img {
+    width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    height: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+    object-fit: cover; 
+}
+
+/* ESTILOS PARA EL CINE */
+
+.gallery-container-cine {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    /* Utiliza porcentajes para ser relativo al contenedor padre */
+    gap: 2vw;
+    /* Utiliza vw (viewport width) para ser relativo al ancho de la pantalla */
+    max-width: 90vw;
+    /* Utiliza vw para ser relativo al ancho de la pantalla */
+    margin: 5vw auto;
+    /* Utiliza vw para ser relativo al ancho de la pantalla */
+    padding: 0 2vw;
+    /* Utiliza vw para ser relativo al ancho de la pantalla */
+}
+.gallery-container-cine img:hover {
+    transform: scale(1.2); /* Hace la imagen 20% más grande */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Agrega una sombra cuando se pasa el mouse */
+  }
+.poster-column,
+.trailer-column {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 4vw;
+    /* Utiliza vw para ser relativo al ancho de la pantalla */
+}
+
+.poster-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.trailer-item {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    border-radius: 2vw;
+    /* Utiliza vw para ser relativo al ancho de la pantalla */
+    overflow: hidden;
+}
+
+.trailer-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.trailer-description {
+    margin: 1vw;
+    /* Utiliza vw para ser relativo al ancho de la pantalla */
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.poster-column {
+    grid-column: 1;
+    /* Ubica en la primera columna */
+}
+
+.trailer-column {
+    grid-column: 2;
+}
+
+/* ESTILOS PARA STREAMING */
+
+.movie-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    /* Agrega espacio superior igual a la altura del menÃº */
+    padding: 0 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Ajusta segÃºn tus necesidades */
+}
+
+.movie-item {
+    overflow: hidden;
+}
+.movie-item:hover {
+    transform: scale(1.2); /* Hace la imagen 20% más grande */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Agrega una sombra cuando se pasa el mouse */
+  }
+
+.movie-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SOBRE NOSOTROS */
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.text-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos adicionales para mejorar la apariencia en dispositivos pequeÃ±os */
+@media (max-width: 768px) {
+    header {
+        height: 400px;
+        /* Ajusta la altura para dispositivos mÃ¡s pequeÃ±os segÃºn tus necesidades */
+        margin-top: 20px;
+        /* Ajusta el margen superior para dispositivos mÃ¡s pequeÃ±os segÃºn tus necesidades */
+    }
+}
+
+/* Media Query para pantallas mÃ¡s pequeÃ±as, ajusta los mÃ¡rgenes y tamaÃ±os de fuente */
+@media screen and (max-width: 1200px) {
+    h2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 30px;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Media Query para pantallas mÃ¡s pequeÃ±as, ajusta los mÃ¡rgenes y tamaÃ±os de fuente */
+@media screen and (max-width: 600px) {
+    h2 {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+    p {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .gallery-container{
+        display: flex;
+        flex-direction: column; /* Apila los elementos en columna */
+        align-items: center; /* Alinea los elementos al centro, opcional */
+    }
+    
+    .gallery-item {
+        flex: 1 0 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 10px; /* Espacio entre las imágenes, ajusta según sea necesario */
+    }
+    .gallery-item img {
+        max-width: 100%; /* La imagen se ajustará al 100% del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+
+/*STREAMING*/
+
+@media screen and (max-width: 768px) {
+    .movie-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .movie-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* SOBRE NOSOTROS */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text-column,
+    .image-column {
+        width: 100%;
+    }
+}
+
+/* ESTILOS PARA EL MENU DESPLEGABLE */
+.btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+
+.btn:hover>span {
+    background-color: #818b99;
+}
+
+.btn span {
+    display: block;
+    margin: 6px;
+    width: 40px;
+    height: 3px;
+    background: #ffffff;
+}
+
+@media only screen and (max-width: 750px) {
+    nav {
+        overflow: visible;
+    }
+
+    .menu {
+        width: 50%;
+        right: 0;
+        top: 80px;
+        background: #ffffffe6;
+        overflow: hidden;
+        max-height: 0;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .btn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .show {
+        max-height: 500px;
+    }
+}
+
+/* FOOTER DE LA PAGINA */
+
+
+
+.contact-info,
+.social-media {
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.contact-info h3,
+.social-media h3 {
+    color: #a2afff;
+    /* Morado como acento */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 40px;
+    height: auto;
+    filter: grayscale(100%);
+    /* Convierte las imÃ¡genes a escala de grises */
+}
+
+.item {
+    flex: 5; 
+    background: linear-gradient(to bottom, #80293b, #eb4457);
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* Estilos adicionales para los botones de login y registro */
+.login-btn,
+.register-btn {
+    background-color: #0c0e81;
+    /* Puedes ajustar el color segÃºn tu diseÃ±o */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn:hover,
+.register-btn:hover {
+    background-color: #3a5082;
+    /* Puedes ajustar el color de hover segÃºn tu diseÃ±o */
+}
+
+/* Agrega estilos para el formulario emergente */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #0b314e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border-color: aliceblue;
+    border-width: 5px;
+}
+
+.popup h2 {
+    color: rgb(229, 244, 255);
+}
+
+.popup label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.popup input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup button {
+    background-color: #5d87ab;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 48%;
+}
+
+.popup button:hover {
+    background-color: #5a2abb;
+    color: #cccccc;
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #209bb4;
+    text-decoration: none;
+    cursor: pointer;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+.p2 {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #4407d3;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #12c9e9;
+  }
+  .contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px; 
+}
+
+.contenedor iframe {
+    width: 700px; /* Ajusta el ancho del video según tus necesidades */
+    height: 300px; /* Para mantener la proporción del video */
+}
+
+.contenedor p {
+    width: 45%; /* Ajusta el ancho del texto según tus necesidades */
+}
+.contenedor img {
+    width: 30%;
+    margin-right: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+}
+@media screen and (max-width: 750px) {
+    /* Aplicar estilos específicos para pantallas con un ancho máximo de 750px */
+    .contenedor {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Alinea los elementos al centro, opcional */
+    }
+
+    .contenedor iframe,
+    .contenedor img {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas más pequeñas */
+        height: auto; /* Mantiene la proporción del video e imagen */
+        margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
+    }
+
+    .contenedor p {
+        width: 100%; /* Ajusta el ancho al 100% del contenedor en pantallas más pequeñas */
+        margin-top: 10px; /* Agrega un pequeño espacio superior en pantallas más pequeñas */
+    }
+}

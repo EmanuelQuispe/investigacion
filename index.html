@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>investigación</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo"></div>
+        <a class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <div class="menu">
+            <a href="#ini">Inicio</a>
+            <a href="#inv">investiagaciones</a>
+            <a href="#pub">Publicaciones</a>
+            <a href="#con">Contacto</a>
+            <div class="botones-login">
+                <a href="#" onclick="showLoginForm()" class="boton">Login</a>
+                <a href="#" onclick="showRegisterForm()" class="boton">Registro</a>
+            </div>
+        </div>
+        <!-- Formulario emergente de login -->
+        <div class="overlay" id="loginOverlay">
+            <div class="popup">
+                <h2>Ingresar</h2>
+                <form id="loginForm">
+                    <form id="login-form">
+                        <label for="username">Usuario:</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button type="button" onclick="login()">Iniciar Sesión</button>
+                    </form>
+                    <a class="close" onclick="closeForm('Ingresar')">×</a>
+            </div>
+        </div>
+        <!-- Formulario emergente de registro -->
+        <div class="overlay" id="registerOverlay">
+            <div class="popup">
+                <h2>Registrarse</h2>
+                <form id="registerForm">
+                    <label for="new-username">Nuevo usuario:</label>
+                    <input type="text" id="new-username" name="new-username" required>
+
+                    <label for="new-password">Nueva contraseña:</label>
+                    <input type="password" id="new-password" name="new-password" required>
+
+                    <button type="button" onclick="register()">Registrarse</button>
+                </form>
+                <a class="close" onclick="closeForm('Registrarse')">×</a>
+            </div>
+        </div>
+    </nav>
+    <header></header>
+    <article>
+        <a id="ini"></a>
+        <h2>Inicio</h2>
+        <p>En este espacio dedicado a la investigación informática, nos sumergimos en el fascinante mundo de la
+            tecnología, explorando las fronteras del conocimiento y contribuyendo al desarrollo y avance de la
+            informática. Nuestra plataforma está diseñada para aquellos apasionados por la innovación, la resolución de
+            problemas y la constante búsqueda de soluciones creativas en el campo de la informática.</p>
+
+        <p>Misión:
+            Nos comprometemos a llevar a cabo investigaciones rigurosas que aborden desafíos actuales y futuros en el
+            ámbito informático. Nuestra misión es impulsar el conocimiento, descubrir nuevas posibilidades y contribuir
+            al progreso tecnológico que impacta directamente en la forma en que vivimos, trabajamos y nos conectamos en
+            el mundo digital.</p>
+
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="iimg/1.jpg" alt="Imagen 1" />
+            </div>
+            <div class="gallery-item">
+                <img src="iimg/2.jpg" alt="Imagen 2" />
+            </div>
+            <div class="gallery-item">
+                <img src="iimg/3.jpg" alt="Imagen 3" />
+            </div>
+        </div>
+    </article>
+    <article id="inv">
+        <h2>Investigación Actual</h2>
+        <div class="contenedor">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GN6qmy7Gtic"
+                title="Tecnologías de la Información y Comunicación (TIC)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>1. Innovación Informática: La innovación informática ha destacado ante la llegada de una pandemia que
+                impuso
+                cambios en nuestras dinámicas de vida. En medio del aislamiento social necesario para contener a la
+                Covid-19, las tecnologías de la información y comunicación (TIC) resaltaron como plataformas de
+                conexión. El
+                estado actual de la informática gira alrededor de la creación de tecnologías, servicios y productos
+                centrados en las personas.</p>
+        </div>
+        <div class="contenedor">
+            <iframe width="1349" height="484" src="https://www.youtube.com/embed/E3B6j5exyHc"
+                title="Robótica, inteligencia artificial, vehículos autónomos y drones" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+            <p>2. Tecnologías Emergentes: Durante el 2020, la innovación informática mostró sus beneficios al ofrecer
+                sus
+                plataformas digitales que mantuvieron activas las relaciones humanas. Creció la demanda en soluciones
+                basadas en HealthTech, eMarketing, eCommerce, blockchain, robots autónomos, drones, RPA y
+                ciberseguridad.
+            </p>
+        </div>
+        <div class="contenedor">
+            <iframe width="1349" height="484" src="https://www.youtube.com/embed/rEz9L442VOY"
+                title="Presentación del III Informe Smart Industry 4 0 y V Premio Impulso de la Industria Conectada"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>3. Transformación Digital: El III Estudio Smart Industry señala que tan solo en España, en 2020, se
+                incrementó al 70% las industrias con un Plan de Transformación Digital. Este estudio y un análisis de
+                Forrester Consulting, reafirman la necesidad de digitalizar procesos productivos e invertir en
+                innovación
+                informática con tecnologías 4.0.</p>
+        </div>
+        <div class="contenedor">
+            <iframe width="1349" height="484" src="https://www.youtube.com/embed/VUxpFmBRsSA"
+                title="ÚLTIMA HORA: Apple ya está desarrollando su propia inteligencia artificial para competir con chatGPT"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>4. Noticias Recientes: Algunas noticias recientes en el campo de la informática incluyen el desarrollo de
+                ChatGPT por Google, la inversión de Apple en su propio ChatGPT, y la presentación de nuevos ordenadores
+                MacBook Pro Mac mini por Apple.</p>
+        </div>
+        <div class="contenedor">
+            <iframe width="1349" height="484" src="https://www.youtube.com/embed/qUW8Qt8s7b8"
+                title="Mi Trabajo de Fin de Grado (TFG de Ingeniería Informática)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <p>5. Investigación Informática: La investigación informática consiste en analizar un problema y plantear
+                soluciones innovadoras, como un nuevo algoritmo, una nueva arquitectura, un nuevo protocolo de
+                seguridad,
+                una nueva forma de usar la informática en una organización, una herramienta innovadora, un caso de
+                estudio.
+            </p>
+        </div>
+        </div>
+    </article>
+
+    <article id="pub">
+        <h2>Publicaciones</h2>
+        <div class="contenedor">
+            <p>1. Orígenes de la Informática: Los orígenes de la informática se remontan a la segunda mitad del siglo XX,
+                aunque la primera generación de computadoras se desarrolló entre 1951 y 1958. Estas primeras computadoras
+                funcionaban con válvulas, cilindros magnéticos e instrucciones internas. Eran ordenadores que funcionaban
+                muy lentamente, eran muy grandes y generaban mucho calor.</p>
+            <img src="iimg/4.gif" alt=""/>
+        </div>
+        <div class="contenedor">
+        <p>2. Precursores del Computador: Aunque hubo muchos precursores de los actuales sistemas informáticos, para
+            muchos especialistas la historia empieza con Charles Babbage (1792-1871), matemático e inventor inglés que
+            al principio del siglo XIX predijo muchas de las teorías en que se basan los actuales ordenadores.</p>
+            <img src="iimg/5.jpg" alt=""/>
+        </div>
+<div class="contenedor">
+        <p>3. Desarrollo del Computador: El desarrollo de la computadora a través de la historia ha tenido un impacto
+            significativo en nuestras actividades cotidianas. Sin embargo, el avance de la tecnología no se dio de
+            manera simultánea en todo el mundo. Fue en países como Inglaterra, otros de Europa, y Estados Unidos, de
+            donde provinieron la mayoría de los avances tecnológicos en materia de computación.</p>
+            <img src="iimg/6.jpg" alt=""/>
+</div>
+<div class="contenedor">
+        <p>4. Generaciones y Tecnología: La tecnología informática ha tenido un efecto revolucionario en la vida diaria
+            del ciudadano de a pie. El ritmo de progreso que ha demostrado ninguna otra tecnología, ni antigua ni
+            moderna, ha alcanzado. En la actualidad, las redes de ordenadores personales se han convertido en algo
+            habitual y la potencia informática ha terminado por integrarse en minúsculos dispositivos portátiles.</p>
+            <img src="iimg/7.jpg" alt=""/>
+        </div>
+    </article>
+
+    <article id="con">
+        <h2>Contacto</h2>
+        <p>¿Tiene preguntas o comentarios? No dude en ponerse en contacto con nosotros...</p>
+
+        <h2>Formulario de Contacto</h2>
+
+        <form action="#" method="post" id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </article>
+
+    <script src="script.js"></script>
+    <footer>
+        <a href="https://www.facebook.com" class="icon-link"><i class="fab fa-facebook-square icon"></i></a>
+        <a href="https://www.pinterest.com" class="icon-link"><i class="fab fa-pinterest icon"></i></a>
+        <a href="https://www.instagram.com" class="icon-link"><i class="fab fa-instagram icon"></i></a>
+        <a href="https://twitter.com" class="icon-link"><i class="fab fa-twitter icon"></i></a>
+
+        <p class="p2">Esta pagina fue echa por Emanuel Quispe Choque carrera de informatica en la facultad de ciencias
+            puras y naturales de la UMSA</p>
+    </footer>
+
+</html>
